@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="AUX_LSM_AX_GADS_coast001" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="coast_flags">
+    <cd:Array>
+      <cd:Description>Coastline Flag 0.01 Degree resolution. 14 bytes holding 112 bits. Each one of the first 100 bits is related to a 0.01 by 0.01 degree cell. The bit value has the following meaning: 1=TRUE=coast, 0=FALSE=land or sea.</cd:Description>
+      <cd:Dimension>14</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<cd:ProductClass name="ENVISAT_AUX" last-modified="2012-12-19" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>ENVISAT auxiliary and other common products</cd:Description>
+  <cd:ProductType name="AUX_FPO_AX">
+    <cd:Description>Predicted orbit state vector</cd:Description>
+    <cd:ProductDefinition id="AUX_FPO_AX" format="ascii" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">AUX_FPO_AX</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="AUX_FRA_AX">
+    <cd:Description>Restituted attitude data</cd:Description>
+    <cd:ProductDefinition id="AUX_FRA_AX" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">AUX_FRA_AX</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="AUX_FRO_AX">
+    <cd:Description>Restituted orbit state vectors</cd:Description>
+    <cd:ProductDefinition id="AUX_FRO_AX" format="ascii" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">AUX_FRO_AX</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="AUX_ATT_AX">
+    <cd:Description>ENVISAT Attitude data</cd:Description>
+    <cd:ProductDefinition id="AUX_ATT_AX" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">AUX_ATT_AX</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="AUX_ECF_AX">
+    <cd:Description>ENVISAT ECMWF data</cd:Description>
+    <cd:ProductDefinition id="AUX_ECF_AX" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">AUX_ECF_AX</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="DOR_POR_AX">
+    <cd:Description>DORIS Preliminary orbit state vectors</cd:Description>
+    <cd:ProductDefinition id="DOR_POR_AX" format="ascii" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">DOR_POR_AX</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="DOR_VOR_AX">
+    <cd:Description>DORIS Precise Orbit State Vectors</cd:Description>
+    <cd:ProductDefinition id="DOR_VOR_AX" format="ascii" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">DOR_VOR_AX</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="TLM_HK__0P">
+    <cd:Description>Telemetry and Housekeeping Level 0</cd:Description>
+    <cd:ProductDefinition id="TLM_HK__0P" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">TLM_HK__0P</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">TLM_HK__0C</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="AUX_DEM_AX">
+    <cd:Description>Digital Elevation Model</cd:Description>
+    <cd:ProductDefinition id="AUX_DEM_AX" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">AUX_DEM_AX</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="AUX_ECA_AX">
+    <cd:Description>ENVISAT ECMWF data</cd:Description>
+    <cd:ProductDefinition id="AUX_ECA_AX" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">AUX_ECA_AX</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="AUX_TIM_AX">
+    <cd:Description>UTC/SBT time conversion file</cd:Description>
+    <cd:ProductDefinition id="AUX_TIM_AX" format="ascii" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">AUX_TIM_AX</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="AUX_LSM_AX">
+    <cd:Description>Land-Sea Mask File</cd:Description>
+    <cd:ProductDefinition id="AUX_LSM_AX" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">AUX_LSM_AX</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+</cd:ProductClass>

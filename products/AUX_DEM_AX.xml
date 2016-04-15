@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="AUX_DEM_AX" format="binary" last-modified="2009-09-10" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Record format="binary">
+    <cd:Field name="mph">
+      <cd:NamedType id="MPH"/>
+    </cd:Field>
+    <cd:Field name="sph">
+      <cd:NamedType id="Auxiliary_Data_SPH"/>
+    </cd:Field>
+    <cd:Field name="dsd">
+      <cd:Array format="ascii">
+        <cd:Dimension>2</cd:Dimension>
+        <cd:NamedType id="DSD"/>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="aux_dem_ax_gads_general">
+      <cd:NamedType id="AUX_DEM_AX_GADS_general" />
+    </cd:Field>
+    <cd:Field name="aux_dem_ax_gads">
+      <cd:Array>
+        <cd:Description>Digital Elevation Model GADS records</cd:Description>
+        <cd:Dimension>4320</cd:Dimension>
+        <cd:NamedType id="AUX_DEM_AX_GADS"/>
+      </cd:Array>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>

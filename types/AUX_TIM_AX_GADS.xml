@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<cd:Record format="ascii" name="AUX_TIM_AX_GADS" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="ref_utc">
+    <cd:Time timeformat="ascii_envisat_datetime">
+      <cd:Description>Reference UTC time corresponding to SBT time below (currently defined to be given at the time of the ascending node state vector)</cd:Description>
+      <cd:Mapping string="                           " value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="blank_1">
+    <cd:Text>
+      <cd:Description>blank space character</cd:Description>
+      <cd:FixedValue> </cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ref_sbt">
+    <cd:Integer>
+      <cd:Description>Reference Satellite Binary Time</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="blank_2">
+    <cd:Text>
+      <cd:Description>blank space character</cd:Description>
+      <cd:FixedValue> </cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="sbt_step">
+    <cd:Integer>
+      <cd:Description>SBT clock step in picoseconds</cd:Description>
+      <cd:Unit>ps</cd:Unit>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_1">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="AUX_LSM_AX_GADS_surf01" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="surf_flag">
+    <cd:Array>
+      <cd:Description>Surface Flag, 0.1 degree resolution. -2 = cell is covered by land, -1 = cell is fully covered by sea, N&gt;0 = cell is not fully land or fully sea: a description of higher resolution of this cell may be found in the record number N (1+GADS number)</cd:Description>
+      <cd:Dimension>100</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

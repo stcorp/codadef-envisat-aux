@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="AUX_LSM_AX" format="binary" last-modified="2010-09-14" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Record format="binary">
+    <cd:Field name="mph">
+      <cd:NamedType id="MPH"/>
+    </cd:Field>
+    <cd:Field name="sph">
+      <cd:NamedType id="Auxiliary_Data_SPH"/>
+    </cd:Field>
+    <cd:Field name="dsd">
+      <cd:Array format="ascii">
+        <cd:Dimension>6</cd:Dimension>
+        <cd:NamedType id="DSD"/>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="gads_surface_1deg">
+      <cd:Array>
+        <cd:Description>Land-Sea Mask GADSR 1 degree resolution [South to North, West to East]</cd:Description>
+        <cd:Dimension>180</cd:Dimension>
+        <cd:Dimension>360</cd:Dimension>
+        <cd:Integer>
+          <cd:Description>Surface flag [-2 = land, -1 = sea, N>0 = cell not fully land nor fully sea]</cd:Description>
+          <cd:NativeType>int16</cd:NativeType>
+          <cd:BitSize>16</cd:BitSize>
+        </cd:Integer>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="gads_surface_0_1deg">
+      <cd:Array>
+        <cd:Description>Land-Sea Mask GADSR 0.1 degree resolution [South to North, West to East]</cd:Description>
+        <cd:Dimension>9543</cd:Dimension>
+        <cd:Dimension>100</cd:Dimension>
+        <cd:Integer>
+          <cd:Description>Surface flag [-2 = land, -1 = sea, N>0 = cell not fully land nor fully sea]</cd:Description>
+          <cd:NativeType>int32</cd:NativeType>
+          <cd:BitSize>32</cd:BitSize>
+        </cd:Integer>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="gads_surface_0_01deg">
+      <cd:Array>
+        <cd:Description>Land-Sea Mask GADSR 0.01 degree resolution [South to North, West to East] (note that the ordering of bits is inverted per byte, i.e. 7,6,5,4,3,2,1,0,15,14,13,12,11,10,9,8,...)</cd:Description>
+        <cd:Dimension>146009</cd:Dimension>
+        <cd:Dimension>112</cd:Dimension>
+        <cd:Integer>
+          <cd:Description>Surface flag [1 = land, 0 = sea]</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="gads_coastline_1deg">
+      <cd:Array>
+        <cd:Description>Coastline GADSR 1 degree resolution [South to North, West to East]</cd:Description>
+        <cd:Dimension>180</cd:Dimension>
+        <cd:Dimension>360</cd:Dimension>
+        <cd:Integer>
+          <cd:Description>Coastline flag [-2 = coast, -1 = not coast, N>0 = cell partially covered by coastline]</cd:Description>
+          <cd:NativeType>int16</cd:NativeType>
+          <cd:BitSize>16</cd:BitSize>
+        </cd:Integer>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="gads_coastline_0_1deg">
+      <cd:Array>
+        <cd:Description>Coastline GADSR 0.1 degree resolution [South to North, West to East]</cd:Description>
+        <cd:Dimension>9765</cd:Dimension>
+        <cd:Dimension>100</cd:Dimension>
+        <cd:Integer>
+          <cd:Description>Coastline flag [-2 = coast, -1 = not coast, N>0 = cell partially covered by coastline]</cd:Description>
+          <cd:NativeType>int32</cd:NativeType>
+          <cd:BitSize>32</cd:BitSize>
+        </cd:Integer>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="gads_coastline_0_01deg">
+      <cd:Array>
+        <cd:Description>Coastline GADSR 0.01 degree resolution [South to North, West to East] (note that the ordering of bits is inverted per byte, i.e. 7,6,5,4,3,2,1,0,15,14,13,12,11,10,9,8,...)</cd:Description>
+        <cd:Dimension>164005</cd:Dimension>
+        <cd:Dimension>112</cd:Dimension>
+        <cd:Integer>
+          <cd:Description>Coastline flag [1 = coast, 0 = land or sea]</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Array>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>

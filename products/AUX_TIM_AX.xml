@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="AUX_TIM_AX" format="ascii" last-modified="2012-12-19" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Record>
+    <cd:Field name="mph">
+      <cd:NamedType id="MPH"/>
+    </cd:Field>
+    <cd:Field name="sph">
+      <cd:NamedType id="Auxiliary_Data_SPH"/>
+    </cd:Field>
+    <cd:Field name="dsd">
+      <cd:Array>
+        <cd:Dimension>1</cd:Dimension>
+        <cd:NamedType id="DSD"/>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="reference_utc_time">
+      <cd:Text>
+        <cd:Description>Reference UTC time corresponding to SBT time below</cd:Description>
+        <cd:ByteSize>27</cd:ByteSize>
+        <cd:NativeType>string</cd:NativeType>
+      </cd:Text>
+    </cd:Field>
+    <cd:Field name="blank_1">
+      <cd:Text>
+        <cd:ByteSize>1</cd:ByteSize>
+        <cd:FixedValue> </cd:FixedValue>
+        <cd:NativeType>string</cd:NativeType>
+      </cd:Text>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="reference_sbt">
+      <cd:Integer>
+        <cd:Description>Reference Satellite Binary Time</cd:Description>
+        <cd:ByteSize>11</cd:ByteSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Field>
+    <cd:Field name="blank_2">
+      <cd:Text>
+        <cd:ByteSize>1</cd:ByteSize>
+        <cd:FixedValue> </cd:FixedValue>
+        <cd:NativeType>string</cd:NativeType>
+      </cd:Text>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="sbt_clock_step">
+      <cd:Integer>
+        <cd:Description>SBT clock step</cd:Description>
+        <cd:ByteSize>11</cd:ByteSize>
+        <cd:NativeType>uint32</cd:NativeType>
+        <cd:Unit>ps</cd:Unit>
+      </cd:Integer>
+    </cd:Field>
+    <cd:Field name="newline_1">
+      <cd:Text>
+        <cd:ByteSize>1</cd:ByteSize>
+        <cd:FixedValue>\n</cd:FixedValue>
+        <cd:NativeType>string</cd:NativeType>
+      </cd:Text>
+      <cd:Hidden/>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>

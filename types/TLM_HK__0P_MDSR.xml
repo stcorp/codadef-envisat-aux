@@ -1,0 +1,271 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="TLM_HK__0P_MDSR" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>ISP Sensing Time</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="gsrt">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Ground Station Reference Time of reception</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="isp_length">
+    <cd:Integer>
+      <cd:Description>Length of the ISP = length of the source packet - 7 bytes</cd:Description>
+      <cd:Unit>bytes</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="crc_errs">
+    <cd:Integer>
+      <cd:Description>Number of VCDUs in the ISP which contain a CRC error</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="rs_errs">
+    <cd:Integer>
+      <cd:Description>Number of VCDUs in the ISP for which a Reed-Solomon error correction was performed</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Array>
+      <cd:Description>Spare (set to zero)</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="packet_header">
+    <cd:NamedType id="CCSDS_packet_header"/>
+  </cd:Field>
+  <cd:Field name="hk_tm_header">
+    <cd:Record>
+      <cd:Description>HK TM Header</cd:Description>
+      <cd:Field name="synchronization_word">
+        <cd:Array>
+          <cd:Description>Synchronization Word (FA F3 20 hex).</cd:Description>
+          <cd:Dimension>3</cd:Dimension>
+          <cd:Integer>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="satellite_nr">
+        <cd:Integer>
+          <cd:Description>The satellite number is 3 for the nominal CFS and 1 for the LVPROM. For the flight spare CCY the satellite number is 2 for the LVPROM.</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="ccu_obt">
+        <cd:Integer>
+          <cd:Description>CCU OBT</cd:Description>
+          <cd:Unit>1/256 s</cd:Unit>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>uint32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="line_number">
+        <cd:Integer>
+          <cd:Description>The TM frame number, between 0 and 15, in the TM format.</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="sat_mode">
+        <cd:Integer>
+          <cd:Description>Satellite Mode.</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="pmc_rbi">
+        <cd:Integer>
+          <cd:Description>PMC RBI status word</cd:Description>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="frame_counter">
+        <cd:Integer>
+          <cd:Description>Frame Counter</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="anomaly_counter">
+        <cd:Integer>
+          <cd:Description>Anomaly Counter</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="last_anomaly">
+        <cd:Integer>
+          <cd:Description>Identification of last anomaly</cd:Description>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="tch_eval">
+        <cd:Integer>
+          <cd:Description>TCH Evaluation</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>uint32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="acq_on_demand_tcm">
+        <cd:Integer>
+          <cd:Description>Acquisition of On-Demand TM in Safe Mode.</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="tms_masking_states">
+        <cd:Integer>
+          <cd:Description>TMS Masking States.</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="rt_telemetry">
+    <cd:Record>
+      <cd:Description>Realtime telemetry</cd:Description>
+      <cd:Field name="sm_hk_data">
+        <cd:Array>
+          <cd:Description>SM HK Data</cd:Description>
+          <cd:Dimension>2</cd:Dimension>
+          <cd:Integer>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="plm_subsys_data">
+        <cd:Array>
+          <cd:Description>PLM Subsystem Data</cd:Description>
+          <cd:Dimension>12</cd:Dimension>
+          <cd:Integer>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="instrument_data">
+        <cd:Array>
+          <cd:Description>Instrument Data</cd:Description>
+          <cd:Dimension>64</cd:Dimension>
+          <cd:Integer>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="sm_hk_data_cont">
+        <cd:Array>
+          <cd:Description>SM HK Data (Continued)</cd:Description>
+          <cd:Dimension>70</cd:Dimension>
+          <cd:Integer>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="tm_type">
+    <cd:Integer>
+      <cd:Description>Type of F1/F2</cd:Description>
+      <cd:BitSize>4</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="peb_valid_flag">
+    <cd:Integer>
+      <cd:Description>Payload Equipment Bay (PEB) Data Valid Flag.</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="f1_valid_flag">
+    <cd:Integer>
+      <cd:Description>F1 Area Valid Flag</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="f2_valid_flag">
+    <cd:Integer>
+      <cd:Description>F2 Area Valid Flag</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="peb_frame_counter">
+    <cd:Record>
+      <cd:Description>Payload Equipment Bay (PEB) Data Frame Counter</cd:Description>
+      <cd:Field name="icu_number">
+        <cd:Integer>
+          <cd:Description>ICU number</cd:Description>
+          <cd:BitSize>4</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="icu_frame_counter">
+        <cd:Integer>
+          <cd:Description>ICU Frame Counter</cd:Description>
+          <cd:BitSize>5</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="on_request_telemetry_f1">
+    <cd:Array>
+      <cd:Description>On-request telemetry (area F1)</cd:Description>
+      <cd:Dimension>50</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="on_request_telemetry_f2">
+    <cd:Array>
+      <cd:Description>On-request telemetry (area F2)</cd:Description>
+      <cd:Dimension>204</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="checksum">
+    <cd:Integer>
+      <cd:Description>Checksum</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="padding">
+    <cd:Array>
+      <cd:Description>padding bytes</cd:Description>
+      <cd:Dimension>245</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

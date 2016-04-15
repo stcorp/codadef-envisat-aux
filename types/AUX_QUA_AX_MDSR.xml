@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="AUX_QUA_AX_MDSR" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="creation_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Creation date of the MDSR</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality indicator (always set to zero)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dsd_num">
+    <cd:Integer>
+      <cd:Description>Number of the DSD to analyze in the Product</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="field_offset">
+    <cd:Integer>
+      <cd:Description>Offset of the field to analyze in the DSR or in each DSR if the DS contains many DSR</cd:Description>
+      <cd:Unit>bytes</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="field_name">
+    <cd:Text format="ascii">
+      <cd:Description>Name of the field to analyze</cd:Description>
+      <cd:ByteSize>50</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="field_type_flag">
+    <cd:Integer>
+      <cd:Description>Data type of the field to analyze</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="field_test_flag">
+    <cd:Integer>
+      <cd:Description>Type of the test to perform on the field</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="test_param">
+    <cd:Float>
+      <cd:Description>Parameter for the test to perform the analysis</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="ident_thresh">
+    <cd:Float>
+      <cd:Description>Identity threshold</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="product_thresh">
+    <cd:Integer>
+      <cd:Description>Product assessment threshold: if the percentage of errors detected by the test exceeds this threshold, the product has to be discarded.</cd:Description>
+      <cd:Unit>%</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>104</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

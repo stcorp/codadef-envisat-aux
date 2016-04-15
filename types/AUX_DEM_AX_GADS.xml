@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="AUX_DEM_AX_GADS" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="ocean_depland_elev">
+    <cd:Array>
+      <cd:Description>Ocean Depth/Land Elevation (from first latitude to last latitude).</cd:Description>
+      <cd:Dimension>2160</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>mm</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>
